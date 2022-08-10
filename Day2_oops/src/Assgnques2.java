@@ -1,17 +1,18 @@
 import java.util.Scanner;
 public class Assgnques2 {
     public static void main(String[] args) {
-        String Uppercase, Lowercase;
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a name/word/statement in Lowercase");
-        Lowercase=sc.nextLine();
-        Uppercase =Lowercase.toUpperCase();
-        System.out.println("The uppercase equivalent of " + Lowercase + " is " + Uppercase);
-        System.out.println("\n");
-        System.out.println("Enter a name/word/statement in Uppercase");
-        Uppercase = sc.nextLine();
-        Lowercase = Uppercase.toLowerCase();
-        System.out.println("The lowercase equivalent of" + Uppercase + " is " + Lowercase);
+        String input = sc.nextLine();
+        String output = "";
+        int i = 0;
+        for (i = 0; i < input.length(); i++) {
+            if (input.charAt(i) >= 'a' && input.charAt(i) <= 'z') {
+                output += Character.toUpperCase(input.charAt(i));
+            } else {
+                output += Character.toLowerCase(input.charAt(i));
+            }
+        }
+        System.out.println(output);
     }
 }
 
